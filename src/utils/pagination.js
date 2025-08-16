@@ -3,4 +3,3 @@
   const s = Math.min(Math.max(parseInt(pageSize, 10) || 50, 1), 1000);
   return { limit: s, offset: (p - 1) * s, page: p, pageSize: s };
 };
-

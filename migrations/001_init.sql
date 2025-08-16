@@ -110,3 +110,6 @@ CREATE TABLE IF NOT EXISTS system_log (
 
 -- Useful indexes
 CREATE INDEX IF NOT EXISTS idx_books_name ON books USING gin (to_tsvector('simple', name));
+CREATE INDEX IF NOT EXISTS idx_user_roles_user ON user_roles(user_id);
+CREATE INDEX IF NOT EXISTS idx_tier_book_access ON tier_book_access(tier_id, book_id, book_details_id);
+CREATE INDEX IF NOT EXISTS idx_user_book_access_log_user ON user_book_access_log(user_id);

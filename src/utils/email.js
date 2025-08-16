@@ -1,5 +1,5 @@
-﻿const nodemailer = require('nodemailer');
-const { EMAIL } = require('../config');
+﻿const nodemailer = require("nodemailer");
+const { EMAIL } = require("../config");
 
 let transporter;
 if (EMAIL.host && EMAIL.user && EMAIL.pass) {
@@ -7,7 +7,7 @@ if (EMAIL.host && EMAIL.user && EMAIL.pass) {
     host: EMAIL.host,
     port: EMAIL.port,
     secure: false,
-    auth: { user: EMAIL.user, pass: EMAIL.pass }
+    auth: { user: EMAIL.user, pass: EMAIL.pass },
   });
 }
 
@@ -18,4 +18,3 @@ exports.send = async ({ to, subject, text }) => {
   }
   await transporter.sendMail({ from: EMAIL.user, to, subject, text });
 };
-
