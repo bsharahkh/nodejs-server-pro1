@@ -1,0 +1,103 @@
+{
+  "configVersion": 1,
+  "timestamp": 1754597814267,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/chunk-DNDMWDDB.js",
+        "/chunk-K6XR3VZA.js",
+        "/chunk-PRWWK2B3.js",
+        "/chunk-RHKUMIHO.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main-V2PUM5CO.js",
+        "/polyfills-B6TNHZQ6.js",
+        "/styles-D5FBSMHB.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/icons/feather.svg",
+        "/icons/google.svg",
+        "/icons/heroicons-mini.svg",
+        "/icons/heroicons-outline.svg",
+        "/icons/heroicons-solid.svg",
+        "/icons/icon-128x128.png",
+        "/icons/icon-144x144.png",
+        "/icons/icon-152x152.png",
+        "/icons/icon-192x192.png",
+        "/icons/icon-384x384.png",
+        "/icons/icon-512x512.png",
+        "/icons/icon-72x72.png",
+        "/icons/icon-96x96.png",
+        "/icons/material-outline.svg",
+        "/icons/material-solid.svg",
+        "/icons/material-twotone.svg",
+        "/icons/microsoft.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/chunk-DNDMWDDB.js": "c8d866456cbc8ec4b49473b53b4bc903d0ae761e",
+    "/chunk-K6XR3VZA.js": "1f0fa3ae1319c11496792d3e8ff561d37283c4f5",
+    "/chunk-PRWWK2B3.js": "5d42e385b34622598ab01f39f96a3c3310be7a8e",
+    "/chunk-RHKUMIHO.js": "54c0294e932b01b7d3a3ef50d914e32539ebe7bb",
+    "/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
+    "/icons/feather.svg": "e60a32e98baea0f915f8e8585ba544afc160b163",
+    "/icons/google.svg": "edc4a34cb63bb489265b5f80aedd38bf2e6547c7",
+    "/icons/heroicons-mini.svg": "35d2bf0e7e2f38b0c9d8e9d13469e6ae712e4dd7",
+    "/icons/heroicons-outline.svg": "0a808fc91404d409943542731c3c680c1ebc681e",
+    "/icons/heroicons-solid.svg": "d3d62a5148dac91b32af0d060b068f6f87574623",
+    "/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
+    "/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
+    "/icons/icon-152x152.png": "eae6e0f0c8afb8aaae339e2a569b43e9238e5e6c",
+    "/icons/icon-192x192.png": "15c4180454633880d98674aa7394656196c91584",
+    "/icons/icon-384x384.png": "94a915751ef6c9282df9aea405ad679230631814",
+    "/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
+    "/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
+    "/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
+    "/icons/material-outline.svg": "56044c5aa643e86dd428fec35bfd453bc3fb0b73",
+    "/icons/material-solid.svg": "7d1dd8505153361776ac7c12538197a7ac3b959d",
+    "/icons/material-twotone.svg": "6d2747f9ee75f9bd894c89413b91b94bd6f04fd0",
+    "/icons/microsoft.svg": "5b170117926ae5a5e451aa24676b5a124c2fa122",
+    "/index.html": "22f998f2466b3d788f669a29cf55c32b819265d6",
+    "/main-V2PUM5CO.js": "6a8b4887c40d9cd63d40f6861221f8fa3a653bec",
+    "/polyfills-B6TNHZQ6.js": "bf76ac291d7f51c1139b7edcf86b359a30c08c64",
+    "/styles-D5FBSMHB.css": "6f7ec89e082dce3c30c2be678e25a5343f5bd304"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

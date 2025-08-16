@@ -24,4 +24,3 @@ router.delete('/details/:id', role('admin'), ctrl.removeDetail);
 
 module.exports = router;
 
-// ===================== TIERS & ACCESS =====================

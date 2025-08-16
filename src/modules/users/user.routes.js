@@ -11,5 +11,3 @@ router.get('/me/subscriptions', ctrl.mySubscriptions);
 router.get('/me/access-log', ctrl.myAccessLog);
 
 module.exports = router;
-
-// ===================== BOOKS MODULE =====================

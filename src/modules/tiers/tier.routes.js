@@ -20,5 +20,3 @@ router.get('/_admin/subscriptions', role('admin'), ctrl.subscriptionsAdmin);
 router.get('/_admin/access-logs', role('admin'), ctrl.logsAdmin);
 
 module.exports = router;
-
-// ===================== ACCESS (AVAILABLE BOOKS & DETAIL) =====================

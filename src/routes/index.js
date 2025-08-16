@@ -14,5 +14,3 @@ router.use('/tiers', tierRoutes);
 router.use('/access', accessRoutes); // admin access mgmt + logs
 
 module.exports = router;
-
-// ===================== AUTH MODULE =====================

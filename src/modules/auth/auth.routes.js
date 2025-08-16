@@ -10,5 +10,3 @@ router.post('/reset/verify', ctrl.resetVerify);
 router.post('/google', ctrl.googleLogin);
 
 module.exports = router;
-
-// ===================== USERS MODULE =====================
