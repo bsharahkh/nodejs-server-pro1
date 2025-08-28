@@ -32,7 +32,7 @@ exports.login = async ({ email, password }) => {
     throw Object.assign(new Error("Email not verified"), { status: 401 });
   const roles = await repo.getUserRoles(user.id);
   const token = sign({ userId: user.id, roles });
-  return { token };
+  return { token , roles };
 };
 
 exports.verifyEmail = async ({ email, code }) => {
