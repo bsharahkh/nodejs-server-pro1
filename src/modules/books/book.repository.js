@@ -21,6 +21,9 @@ exports.listBooks = async ({ active, name, order, limit, offset }) => {
     LIMIT $${i++} OFFSET $${i}
   `;
   values.push(limit, offset);
+
+  // console.log(sql);
+  
   const { rows } = await pool.query(sql, values);
   const totalItems = rows[0]?.total || 0;
   return { totalItems, items: rows.map(({ total, ...r }) => r) };

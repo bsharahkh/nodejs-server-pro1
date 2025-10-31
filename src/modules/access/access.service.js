@@ -1,6 +1,27 @@
 ﻿const repo = require("./access.repository");
 const { buildPagination } = require("../../utils/pagination");
 
+exports.listBooks = async ({
+  userId,
+  isAdmin,
+  page,
+  pageSize,
+  order,
+  name,
+}) => {
+
+  const { limit, offset } = buildPagination(page || 1, pageSize || 10);
+  return repo.listBooks({
+    name,
+    isAdmin,
+    limit,
+    offset,
+    order,
+  });
+
+};
+
+
 exports.listAvailableBooks = async ({
   userId,
   isAdmin,
@@ -10,8 +31,11 @@ exports.listAvailableBooks = async ({
   name,
 }) => {
   const tierIds = await repo.getUserTierIdsActive({ userId, isAdmin });
+
   if (!tierIds.length)
     return { totalItems: 0, page: 1, pageSize: pageSize || 10, items: [] };
+
+  
   const { limit, offset } = buildPagination(page || 1, pageSize || 10);
   return repo.listAvailableBooks({
     tierIds,

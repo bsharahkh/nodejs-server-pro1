@@ -12,9 +12,13 @@ if (EMAIL.host && EMAIL.user && EMAIL.pass) {
 }
 
 exports.send = async ({ to, subject, text }) => {
-  if (!transporter) {
-    console.log(`[email disabled] To:${to} Subject:${subject} Text:${text}`);
-    return;
+  try {
+    if (!transporter) {
+      console.log(`[email disabled] To:${to} Subject:${subject} Text:${text}`);
+      return;
+    }
+    await transporter.sendMail({ from: EMAIL.user, to, subject, text });
+  } catch (err) {
+    console.error("Error sending email:", err);
   }
-  await transporter.sendMail({ from: EMAIL.user, to, subject, text });
 };
