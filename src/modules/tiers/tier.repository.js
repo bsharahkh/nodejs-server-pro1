@@ -43,15 +43,29 @@ exports.listTiers = async ({ name, order, limit, offset }) => {
       SELECT t.* FROM tiers t ${wc}
     ),
     aj AS (
-      SELECT t.*, COALESCE(json_agg(json_build_object(
-        'book_id', tba.book_id,
-        'book_details_id', tba.book_details_id,
-        'unlock_delay_minutes', tba.unlock_delay_minutes,
-        'required', tba.required
-      ) ORDER BY tba.book_id) FILTER (WHERE tba.id IS NOT NULL), '[]') AS access
+      SELECT 
+        t.id,
+        t.name,
+        t.description,
+        t.price,
+        t.duration_days,
+        t.active,
+        t.created_at,
+        COALESCE(
+          json_agg(
+            json_build_object(
+              'book_id', tba.book_id,
+              'book_details_id', tba.book_details_id,
+              'unlock_delay_minutes', tba.unlock_delay_minutes,
+              'required', tba.required
+            ) ORDER BY tba.book_id
+          ) FILTER (WHERE tba.id IS NOT NULL),
+          '[]'
+        ) AS access
       FROM ft t
       LEFT JOIN tier_book_access tba ON t.id=tba.tier_id
-      GROUP BY t.id
+      GROUP BY 
+        t.id, t.name, t.description, t.price, t.duration_days, t.active, t.created_at
     ),
     c AS (SELECT COUNT(*)::int AS total FROM ft)
     SELECT a.*, c.total FROM aj a, c
