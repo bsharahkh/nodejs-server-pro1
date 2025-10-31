@@ -12,6 +12,18 @@ const app = express();
 
 // Security & utils
 app.use(helmet());
+
+// Allow inline scripts (quick fix — for dev only)
+app.use((req, res, next) => {
+  res.setHeader(
+    "Content-Security-Policy",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://fonts.gstatic.com;"
+  );
+  next();
+});
+
+
+
 app.use(
   cors({ origin: CORS_ORIGIN === "*" ? true : CORS_ORIGIN, credentials: true })
 );
